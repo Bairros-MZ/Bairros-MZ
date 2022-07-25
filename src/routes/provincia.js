@@ -3,7 +3,7 @@ const Bairros = require('../config')
 
 const router = express.Router()
 
-router.get('/provincia',async(res)=>{
+router.get('/provincia',async(req,res)=>{
     const snapshot = await Bairros.get()
     const list = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}))
     res.send(list)
