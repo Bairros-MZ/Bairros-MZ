@@ -1,6 +1,5 @@
 const express = require('express')
 const provinciaRoutes = require('./routes/bairro')
-const Bairros = require('./config')
 const port = process.env.PORT || 3000
 
 const app = express()
